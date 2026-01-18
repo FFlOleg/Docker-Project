@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <h1>Task Manager</h1>
+
+    <section class="card">
+      <h2>Add user</h2>
+      <form id="user-form">
+        <input id="user-name" placeholder="User name" />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Search tasks</h2>
+      <input id="search-input" placeholder="Search by task title..." />
+    </section>
+
+    <section class="filters">
+      <button id="filter-all">All</button>
+      <button id="filter-todo">Todo</button>
+      <button id="filter-done">Done</button>
+    </section>
+
+    <section class="card">
+      <h2>Add task</h2>
+      <form id="task-form">
+        <input id="task-title" placeholder="Task title" />
+        <select id="user-select"></select>
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Task list</h2>
+      <div id="tasks-list"></div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

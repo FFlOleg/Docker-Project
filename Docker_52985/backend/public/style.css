@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #334155;
+  color: white;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background: #334155;
+}
+
+.filters button:hover {
+  background: #475569;
+}
+
+#tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  background: #334155;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 24px 1fr 36px;
+  align-items: center;
+}
+
+.task input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.task span {
+  text-align: center;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.task button {
+  background: #6366f1;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.task button:hover {
+  background: #4f46e5;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .task {
+    padding: 10px;
+  }
+
+  .task span {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+}

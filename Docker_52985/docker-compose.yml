@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: taskdb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      LANG: en_US.utf8
+      LC_ALL: en_US.utf8
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./backend/db-init:/docker-entrypoint-initdb.d
+    restart: always
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    restart: always
